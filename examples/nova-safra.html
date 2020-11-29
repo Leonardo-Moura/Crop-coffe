@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <title>CoffeCrop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="home-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="./index.html" id="logo" class="navbar-brand" href="#">Coffe<span>Crop</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               
+                <li class="nav-item active">
+                    <a class="nav-link" href="./usuarios.html">Usuários</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="./centro-custos.html">Centro de Custos</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="./ordem-servico.html">Ordem de Serviço</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="./caixa.html">Fluxo de Caixa</span></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Máquinarios
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./novo-maquinario.html">Cadastrar Novo</a>
+                        <a class="dropdown-item" href="./gerenciar-maquinario.html">Gerenciar Máquinario</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Colheita
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./nova-colheita.html">Cadastrar Nova</a>
+                        <a class="dropdown-item" href="./gerenciar-colheita.html">Gerenciar Colheita</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Safra
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./nova-safra.html">Cadastrar Nova</a>
+                        <a class="dropdown-item" href="./gerenciar-safra.html">Gerenciar Safra</a>
+                    </div>
+                </li>
+        </div>
+    </nav>
+
+    <container id="form-container">
+        <form>
+            <h4>Nova Safra</h4>
+
+            <div class="form-group">
+                <label for="inputAddress">Descrição</label>
+                <input type="text" class="form-control" id="desc" placeholder="Descrição da safra...">
+            </div>
+
+            <div class="form-group mb-2">
+
+                <div class="form-row mb-2">
+                    <label for="estado">Adicionar Colheitas</label>
+                    <select class="form-control" id="estado">
+                        <option>Janeiro</option>
+                        <option>Agosto</option>
+                        <option>Outubro</option>
+                    </select>
+                </div>
+                <ul>
+                    <li>Colheita Janeiro <button style="border-radius: 100%!important;" class="btn btn-danger btn-sm">x</button></li>
+                    <li>Colheita Outubro <button style="border-radius: 100%!important;" class="btn btn-danger btn-sm">x</button></li>
+                </ul>
+                
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="destino">Área total (ha)</label>
+                        <input type="value" class="form-control" id="destino" placeholder="Área em hectare...">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="origem">Início</label>
+                        <input type="date" class="form-control" id="data-inicio">
+                    </div>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Área</th>
+                    <th scope="col">Início</th>
+                    <th scope="col">Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</th>
+                    <td>Colheita 2019</th>
+                    <td>20 ha</td>
+                    <td>30/01/2019</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm">Remover</button>
+                        <button class="btn btn-info btn-sm">Editar</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </container>
+
+
+</body>
+
+</html>
