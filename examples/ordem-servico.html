@@ -6,6 +6,9 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../assets/css/home.css">
+
+    <link href="../assets/fontawesome-free/css/*" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -79,12 +82,12 @@
         </div>
     </nav>
     <container id="form-container">
-        <form>
+        <form id ="form">
             <h4>Ordem de serviço</h4>
 
             <div class="form-group">
                 <label for="inputAddress">Descrição</label>
-                <input type="text" class="form-control" id="desc" placeholder="Descrição da ordem de serviço...">
+                <input type="text" class="form-control" id="desc" placeholder="Descrição da ordem de serviço">
             </div>
 
             <div class="form-group">
@@ -114,11 +117,10 @@
                 </div>
             </div>
 
-          
             </div>
 
-
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary" onclick="add()">Cadastrar</button>
+			
         </form>
 
         <table class="table">
@@ -131,19 +133,8 @@
                     <th scope="col">Editar</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</th>
-                    <td>Manutenção da Colheitadeira</td>
-                    <td>Leonardo</td>
-                    <td>Alta</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Remover</button>
-                        <button class="btn btn-info btn-sm">Editar</button>
-                    </td>
-                </tr>
-
-            </tbody>
+            <tbody id="table">
+			</tbody>
         </table>
 
     </container>
@@ -152,3 +143,10 @@
 </body>
 
 </html>
+
+<script src="../assets/scripts/ordem-servico/mock.js"></script>
+<script src="../assets/scripts/ordem-servico/htmlLoader.js"></script>
+<script src="../assets/scripts/ordem-servico/ordem-servico.js"></script>
+<script>
+    init();
+</script>
