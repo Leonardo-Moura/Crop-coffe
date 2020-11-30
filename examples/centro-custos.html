@@ -83,12 +83,12 @@
     </nav>
 
     <container id="form-container">
-        <form>
+        <form id="form">
             <h4>Centro de Custo</h4>
 
             <div class="form-group">
-                <label for="inputAddress">Descrição</label>
-                <input type="text" class="form-control" id="desc" placeholder="Descricao do centro de custo">
+                <label for="descricao">Descrição</label>
+                <input type="text" class="form-control" id="descricao" placeholder="Descricao do centro de custo">
             </div>
 
             <div class="form-row">
@@ -105,7 +105,7 @@
             </div>
 
 
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary" onclick="add()">Cadastrar</button>
         </form>
 
         <table class="table">
@@ -118,18 +118,7 @@
                     <th scope="col">Editar</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Custos Gerais</td>
-                    <td>Financeiro</td>
-                    <td>Financeiro</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Remover</button>
-                        <button class="btn btn-info btn-sm">Editar</button>
-                    </td>
-                </tr>
-
+            <tbody id="table">
             </tbody>
         </table>
 
@@ -140,3 +129,10 @@
 </body>
 
 </html>
+
+<script src="../assets/scripts/centro-custos/mock.js"></script>
+<script src="../assets/scripts/centro-custos/htmlLoader.js"></script>
+<script src="../assets/scripts/centro-custos/centro-custos.js"></script>
+<script>
+    init();
+</script>
