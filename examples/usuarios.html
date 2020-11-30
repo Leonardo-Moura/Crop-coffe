@@ -83,7 +83,7 @@
     </nav>
 
     <container id="form-container">
-        <form>
+        <form id="form">
             <h4>Cadastro de Usuários</h4>
             <div class="form-row">
 
@@ -99,8 +99,8 @@
             </div>
 
             <div class="form-group">
-                <label for="inputAddress">Nome</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="Ex: José da Silva">
+                <label for="inputName">Nome</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Ex: José da Silva">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -108,8 +108,8 @@
                     <input type="text" class="form-control" id="inputAddress2" placeholder="Ex: Av. Assis">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputState">Cargo</label>
-                    <select id="inputState" class="form-control">
+                    <label for="inputPosition">Cargo</label>
+                    <select id="inputPosition" class="form-control">
                         <option selected>...</option>
                         <option value="1">Proprietário</option>
                         <option value="2">Diretor</option>
@@ -174,7 +174,7 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" onclick="add()" class="btn btn-primary">Cadastrar</button>
         </form>
 
         <table class="table">
@@ -186,35 +186,7 @@
                     <th scope="col">Editar</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>José</td>
-                    <td>Financeiro</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Remover</button>
-                        <button class="btn btn-info btn-sm">Editar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Antonio</td>
-                    <td>Gestor de Produção</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Remover</button>
-                        <button class="btn btn-info btn-sm ">Editar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Leonardo</td>
-                    <td>Proprietário</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Remover</button>
-                        <button class="btn btn-info btn-sm">Editar</button>
-                    </td>
-
-                </tr>
+            <tbody id="table">
             </tbody>
         </table>
 
@@ -225,3 +197,11 @@
 </body>
 
 </html>
+
+<script src="../assets/scripts/usuarios/mock.js"></script>
+<script src="../assets/scripts/usuarios/htmlLoader.js"></script>
+<script src="../assets/scripts/usuarios/usuarios.js"></script>
+<script>
+    init();
+    updateList();
+</script>
