@@ -6,6 +6,9 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../assets/css/home.css">
+
+    <link href="../assets/fontawesome-free/css/*" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -80,7 +83,7 @@
     </nav>
 
     <container id="form-container">
-        <form>
+        <form id ="form">
             <h4>Nova Colheita</h4>
 
             <div class="form-group">
@@ -91,24 +94,23 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="destino">Área total (ha)</label>
-                    <input type="value" class="form-control" id="destino" placeholder="Área em hectare...">
+                    <input type="value" class="form-control" id="areaplantada" placeholder="Área em hectare...">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="origem">Início</label>
-                    <input type="date" class="form-control" id="data-inicio">
+                    <input type="date" class="form-control" id="datainicio">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="origem">Fim</label>
-                    <input type="date" class="form-control" id="data-fim">
+                    <input type="date" class="form-control" id="datafim">
                 </div>
             </div>
 
-
-
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary" onclick="add()">Cadastrar</button>
+			
         </form>
 
         <table class="table">
@@ -122,21 +124,10 @@
                     <th scope="col">Editar</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</th>
-                    <td>Colheita Janeiro</th>
-                    <td>10 ha</td>
-                    <td>01/01/2020</td>
-                    <td>30/01/2020</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Remover</button>
-                        <button class="btn btn-info btn-sm">Editar</button>
-                    </td>
-                </tr>
-
-            </tbody>
+            <tbody id="table">
+			</tbody>
         </table>
+
 
     </container>
 
@@ -144,3 +135,10 @@
 </body>
 
 </html>
+
+<script src="../assets/scripts/nova-colheita/mock.js"></script>
+<script src="../assets/scripts/nova-colheita/htmlLoader.js"></script>
+<script src="../assets/scripts/nova-colheita/nova-colheita.js"></script>
+<script>
+    init();
+</script>
