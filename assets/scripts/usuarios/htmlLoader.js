@@ -33,9 +33,9 @@ function load() {
     nome = document.getElementById('inputName').value;
     rua = document.getElementById('inputAddress2').value;
     cargo = getCargoFromHtml();
-    cidade = document.getElementById('inputCity');
+    cidade = document.getElementById('inputCity').value;
     uf = getUFFromHtml();
-    cep = document.getElementById('inputZip');
+    cep = document.getElementById('inputZip').value;
     ativo = document.getElementById('gridCheck').checked;
 }
 

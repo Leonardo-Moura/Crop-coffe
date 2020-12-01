@@ -1,42 +1,44 @@
-const list = new Array();
+const list = new Lista();
+let idAtual = null;
 
 function init() {
-    addUser(getJose());
-    addUser(getAntonio());
-    addUser(getLeonardo());
+    list.addElement(getJose());
+    list.addElement(getAntonio());
+    list.addElement(getLeonardo());
+
+    updateList();
 }
 
-function addUser(user) {
-    let id = 1;
-    if (list.length > 0) {
-        id = list.map(u => u.id).reduce(function (u1, u2) {return Math.max(u1, u2)});
-        id += 1;
-    }
-
-    user.id = id;
-    list.push(user);
-}
-
-function add() {
+function addOrUpdate() {
     event.preventDefault();
 
     const user = getUser();
-    addUser(user);
+    if (isUpdate(idAtual, list)) {
+        list.update(idAtual, user);
+        idAtual = null;
+    } else {
+        list.addElement(user);
+    }
 
     document.getElementById('form').reset();
     updateList();
 }
 
+function update(id) {
+    const user = list.getElement(id);
+    if (user) {
+        idAtual = user.id;
+        setUser(user);
+    }
+}
+
 function remove(id) {
-    list.splice(id - 1, 1);
+    list.remove(id);
     updateList();
 }
 
 function updateList() {
-    let listHtml = '';
-    list.forEach(t => listHtml += getRow(t));
-
-    document.getElementById('table').innerHTML = listHtml;
+    commomUpdateList(list, getRow);
 }
 
 function getRow(rowData) {
@@ -47,7 +49,7 @@ function getRow(rowData) {
             <td>${rowData.cargo}</td>
             <td>
                 <button class="btn btn-danger btn-sm" onclick="remove(${rowData.id})">Remover</button>
-                <button class="btn btn-info btn-sm">Editar</button>
+                <button class="btn btn-info btn-sm" onclick="update(${rowData.id})">Editar</button>
             </td>
         </tr>
     `;
