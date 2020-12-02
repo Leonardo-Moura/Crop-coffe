@@ -82,7 +82,8 @@ function getParcelasFromHtml() {
 
 function getCtabancFromHtml() {
     const ctabancsElement = document.getElementById('inputCtabanc');
-    return ctabancsElement[CtabancsElement.selectedIndex].text;
+    return ctabancsElement[ctabancsElement.selectedIndex].text;
+}
 
 function createMovim() {
     const movim = {
@@ -103,6 +104,5 @@ function createMovim() {
 		vlacresc: vlacresc,
 		dtpag: dtpag
     };
-
-return movim;
+	return movim;
 }
