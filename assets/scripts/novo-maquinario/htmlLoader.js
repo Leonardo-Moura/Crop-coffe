@@ -1,4 +1,5 @@
 let desc;
+let numManutencao;
 let estado;
 let valor;
 
@@ -11,12 +12,14 @@ function getNovoMaquinario() {
 
 function clear() {
     desc = '';
+    numManutencao = '0';
     estado = '';
     valor = '';
 }
 
 function load() {
     desc = document.getElementById('desc').value;
+    numManutencao = document.getElementById('manutencao').value;
     estado = document.getElementById('estado').value;
     valor = document.getElementById('valor').value;
 }
@@ -24,6 +27,7 @@ function load() {
 function createNovoMaquinario() {
     return {
         desc: desc,
+        numManutencao: numManutencao,
         estado: estado,
         valor: valor
     }

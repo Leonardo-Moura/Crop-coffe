@@ -1,42 +1,42 @@
-const list = new Array();
+const list = new Lista();
+let idAtual = null;
 
 function init() {
-    addCentroCusto(getCustosGerais());
+    list.addElement(getCustosGerais());
 
     updateList()
 }
 
-function addCentroCusto(centroCusto) {
-    let id = 1;
-    if (list.length > 0) {
-        id = list.map(c => c.id).reduce((c1, c2) => Math.max(c1, c2));
-        id += 1;
-    }
-
-    centroCusto.id = id;
-    list.push(centroCusto);
-}
-
-function add() {
+function addOrUpdate() {
     event.preventDefault();
 
     const centroCusto = getCentroCusto();
-    addCentroCusto(centroCusto);
+    if (isUpdate(idAtual, list)) {
+        list.update(idAtual, centroCusto);
+        idAtual = null;
+    } else {
+        list.addElement(centroCusto);
+    }
 
     document.getElementById('form').reset();
     updateList();
 }
 
+function update(id) {
+    const centroCusto = list.getElement(id);
+    if (centroCusto) {
+        idAtual = centroCusto.id;
+        setCentroCusto(centroCusto);
+    }
+}
+
 function remove(id) {
-    list.splice(id - 1, 1);
+    list.remove(id);
     updateList();
 }
 
 function updateList() {
-    let listHtml = '';
-    list.forEach(t => listHtml += getRow(t));
-
-    document.getElementById('table').innerHTML = listHtml;
+    commomUpdateList(list, getRow);
 }
 
 function getRow(rowData) {
@@ -48,7 +48,7 @@ function getRow(rowData) {
             <td>${rowData.destino}</td>
             <td>
                 <button class="btn btn-danger btn-sm" onclick="remove(${rowData.id})">Remover</button>
-                <button class="btn btn-info btn-sm">Editar</button>
+                <button class="btn btn-info btn-sm" onclick="update(${rowData.id})">Editar</button>
             </td>
         </tr>
     `;

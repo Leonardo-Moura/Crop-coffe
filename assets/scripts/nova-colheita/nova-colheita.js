@@ -1,42 +1,41 @@
-const list = new Array();
+const list = new Lista();
+let idAtual = null;
 
 function init() {
-    addNovaColheita(getColheitaJaneiro());
+    list.addElement(getColheitaJaneiro());
 
     updateList()
 }
 
-function addNovaColheita(novaColheita) {
-    let id = 1;
-    if (list.length > 0) {
-        id = list.map(n => n.id).reduce((n1, n2) => Math.max(n1, n2));
-        id += 1;
-    }
-
-    novaColheita.id = id;
-    list.push(novaColheita);
-}
-
-function add() {
+function addOrUpdate() {
     event.preventDefault();
 
     const novaColheita = getNovaColheita();
-    addNovaColheita(novaColheita);
+    if (isUpdate(idAtual, list)) {
+        list.update(idAtual, novaColheita);
+        idAtual = null;
+    } else {
+        list.addElement(novaColheita);
+    }
 
     document.getElementById('form').reset();
     updateList();
 }
+function update(id) {
+    const colheita = list.getElement(id);
+    if (colheita) {
+        idAtual = colheita.id;
+        setColheita(colheita);
+    }
+}
 
 function remove(id) {
-    list.splice(id - 1, 1);
+    list.remove(id);
     updateList();
 }
 
 function updateList() {
-    let listHtml = '';
-    list.forEach(t => listHtml += getRow(t));
-
-    document.getElementById('table').innerHTML = listHtml;
+    commomUpdateList(list, getRow);
 }
 
 function getRow(rowData) {
@@ -49,7 +48,7 @@ function getRow(rowData) {
 			<td>${rowData.datafim}</td>
             <td>
                 <button class="btn btn-danger btn-sm" onclick="remove(${rowData.id})">Remover</button>
-                <button class="btn btn-info btn-sm">Editar</button>
+                <button class="btn btn-info btn-sm" onclick="update(${rowData.id})">Editar</button>
             </td>
         </tr>
     `;

@@ -20,8 +20,8 @@ function clear() {
 function load() {
     desc = document.getElementById('desc').value;
     areaplantada = document.getElementById('areaplantada').value;
-    datainicio = document.getElementById('datainicio').value;
-	datafim = document.getElementById('datafim').value;
+    datainicio = getDateinFormatDDMMYYYY(document.getElementById('datainicio').value);
+	datafim = getDateinFormatDDMMYYYY(document.getElementById('datafim').value);
 
 }
 

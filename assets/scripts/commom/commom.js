@@ -17,3 +17,18 @@ function getComboValue(idElemento, texto) {
         }        
     }
 }
+
+function getDateinFormatDDMMYYYY(date) {
+    const value = new Date(date);
+    return `${completarComZero(value.getDate())}/${completarComZero(value.getMonth() + 1)}/${value.getFullYear()}`;
+}
+
+function completarComZero(numero) {
+    numero = '0' + String(numero);
+    return numero.substring(numero.length - 2);
+}
+
+function getDateinFormatYYYYMMDD(date) {
+    const values = date.split('/');
+    return `${values[2]}-${values[1]}-${values[0]}`;
+}
