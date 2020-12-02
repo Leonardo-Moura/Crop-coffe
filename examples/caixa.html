@@ -84,9 +84,9 @@
 
     <container id="form-container">
         <form>
-            <h4>Fluxo de Caixa</h4>
-			
+		
 			<hr size="10" width="100%">	
+            <h4>Fluxo de Caixa</h4>			
 			<hr size="10" width="100%">
 
 			<div class="form-row">
@@ -169,7 +169,7 @@
                 <div class="form-group col-md-6">
                     <label for="destino">Valor Total (R$)</label>
                     <input type="number" step="0.01" min="0.01" class="form-control" id="inputValor"
-                        placeholder="Valor da movimentação...">
+                        placeholder="Valor total da movimentação...">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="origem">Data de Vencimento</label>
@@ -178,6 +178,7 @@
 			</div>
 						
 			<hr size="10" width="100%">
+			<h4>Detalhes do Pagamento/Recebimento</h4>	
 			<hr size="10" width="100%">
 			
 			<div class="form-row">
@@ -205,25 +206,25 @@
                 <div class="form-group col-md-6">
                     <label for="destino">Valor Pago/Recebido (R$)</label>
                     <input type="number" step="0.01" min="0.01" class="form-control" id="inputVlpago"
-                        placeholder="Valor da movimentação...">
+                        placeholder="Valor pago/recebido...">
                 </div>
 				<div class="form-group col-md-6">
                     <label for="destino">Valor em Aberto (R$)</label>
                     <input type="number" step="0.01" min="0.01" class="form-control" id="inputVlaberto"
-                        placeholder="Valor da movimentação...">
+                        placeholder="Valor em aberto...">
                 </div>
 			</div>
 			
 			<div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="destino">Valor Multa/Juros (R$)</label>
+                    <label for="destino">Valor de Total Multa/Juros (R$)</label>
                     <input type="number" step="0.01" min="0.01" class="form-control" id="inputVlMulta"
-                        placeholder="Valor da movimentação...">
+                        placeholder="Valor total de multa/juros...">
                 </div>
 				<div class="form-group col-md-4">
-                    <label for="destino">Valor Acréscimo/Desconto (R$)</label>
+                    <label for="destino">Valor de Acréscimo/Desconto (R$)</label>
                     <input type="number" step="0.01" min="0.01" class="form-control" id="inputVlacresc"
-                        placeholder="Valor da movimentação...">
+                        placeholder="Valor de acréscimo/desconto...">
                 </div>
 				<div class="form-group col-md-4">
 					<label for="origem">Data de Pagamento/Recebimento</label>
@@ -231,7 +232,6 @@
 				</div>
 			</div>			
 			
-			<hr size="10" width="100%">	
 			<hr size="10" width="100%"> 
 			
             <button type="submit" class="btn btn-primary">Cadastrar</button>
