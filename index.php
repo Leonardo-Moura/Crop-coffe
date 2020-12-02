@@ -1,1 +1,11 @@
 <?php include_once("examples/index.html"); ?>
+<?php include_once("examples/usuarios.html"); ?>
+<?php include_once("examples/ordem-servico.html"); ?>
+<?php include_once("examples/novo-maquinario.html"); ?>
+<?php include_once("examples/nova-safra.html"); ?>
+<?php include_once("examples/nova-colheita.html"); ?>
+<?php include_once("examples/gerenciar-safra.html"); ?>
+<?php include_once("examples/gerenciar-maquinario.html"); ?>
+<?php include_once("examples/gerenciar-colheita.html"); ?>
+<?php include_once("examples/centro-custos.html"); ?>
+<?php include_once("examples/caixa.html"); ?>
