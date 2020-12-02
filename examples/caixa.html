@@ -30,7 +30,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-               
+
                 <li class="nav-item active">
                     <a class="nav-link" href="./usuarios.html">Usuários</a>
                 </li>
@@ -86,19 +86,17 @@
         <form>
             <h4>Fluxo de Caixa</h4>
 
-			<div class="form-row">
-				<div class="form-group col-md-2 mr-3">
-						<label class="ml-4"for="destino">Movimentação</label>
+				<div class="form-group">
+						<label for="destino">Movimentação</label>
 							<select class="form-control" id="inputMovim">
 							<option>Entrada</option>
 							<option>Saída</option>
 						</select>
-				</div>				
-				<div class="form-group col-md-9">
+				</div>
+				<div class="form-group">
 					<label for="inputAddress">Descrição</label>
 					<input type="text" class="form-control" id="inputDesc" placeholder="Descrição da movimentação...">
 				</div>
-			</div>
 
             <div class="form-group">
                 <label for="inputAddress">Cliente/Fornecedor</label>
@@ -122,7 +120,7 @@
 						<option>Recursos Humanos</option>
 						<option>Segurança</option>
                     </select>
-                </div>				
+                </div>
 				<div class="form-group col-md-3">
                     <label for="parcelas">Forma de Pagamento</label>
                     <select class="form-control" id="inputFormapag">
@@ -138,7 +136,7 @@
                     </select>
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="parcelas">Parcelas</label>
+                    <label for="parcelas">Quantidade de Parcelas</label>
                     <select class="form-control" id="inputParcelas">
                         <option>01</option>
                         <option>02</option>
@@ -152,13 +150,13 @@
                         <option>10</option>
                         <option>11</option>
                         <option>12</option>
-                    </select>					
+                    </select>
                 </div>
             </div>
-			
+
 			<div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="destino">Valor</label>
+                    <label for="destino">Valor Total (R$)</label>
                     <input type="number" step="0.01" min="0.01" class="form-control" id="inputValor"
                         placeholder="Valor da movimentação...">
                 </div>
@@ -167,18 +165,18 @@
                     <input type="date" class="form-control" id="inputDtvenc">
                 </div>
 			</div>
-			
+
 			<div class="form-row">
-				<div class="form-group col-md-3">
+				<div class="form-group col-md-6">
 						<label for="parcelas">Conta Bancária</label>
 						<select class="form-control" id="inputCtabanc">
-							<option>Caixa</option>
+							<option>Caixa Interno</option>
 							<option>Banco do Brasil</option>
 							<option>Bradesco</option>
 							<option>Itaú</option>
-						</select>					
+						</select>
 				</div>
-				<div class="form-group col-md-3">
+				<div class="form-group col-md-6">
 						<label for="parcelas">Situação</label>
 						<select class="form-control" id="inputSituacao">
 							<option>Aguardando Pagamento</option>
@@ -188,9 +186,6 @@
 						</select>
 				</div>
 			</div>
-			
-            </div>
-
 
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
@@ -203,7 +198,7 @@
                     <th scope="col">Descrição</th>
                     <th scope="col">Cliente/Fornecedor</th>
                     <th scope="col">Data de Vencimento</th>
-					<th scope="col">Valor</th>
+					<th scope="col">Valor Total (R$)</th>
 					<th scope="col">Banco</th>
 					<th scope="col">Situação</th>
                     <th scope="col"></th>
