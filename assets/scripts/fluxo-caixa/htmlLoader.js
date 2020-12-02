@@ -8,7 +8,12 @@ let parcelas;
 let valor;
 let dtvenc;
 let ctabanc;
-let situacao
+let situacao;
+let vlpago;
+let vlaberto;
+let vlmulta;
+let vlacresc;
+let dtpag;
 
 function getMovim() {
     clear();
@@ -29,6 +34,11 @@ function clear() {
     dtvenc = '';
     ctabanc = '';
 	situacao = '';
+	vlpago = '';
+	vlaberto = '';
+	vlmulta = '';
+	vlacresc = '';
+	dtpag = '';
 }
 
 function load() {
@@ -43,6 +53,11 @@ function load() {
     dtvenc = document.getElementById('inputDtvenc').value;
 	ctabanc = getCtabancFromHtml();
     situacao = document.getElementById('inputSituacao').value;
+	vlpago = document.getElementById('inputVlpago').value;
+    vlaberto = document.getElementById('inputVlaberto').value;
+    vlmulta = document.getElementById('inputVlmulta').value;
+    vlacresc = document.getElementById('inputVlacresc').value;
+    dtpag = document.getElementById('inputDtpag').value;
 }
 
 function getMovimsFromHtml() {
@@ -81,8 +96,13 @@ function createMovim() {
         valor: valor,
         dtvenc: dtvenc,
         ctabanc: ctabanc,
-		situacao: situacao
+		situacao: situacao,
+		vlpago: vlpago,
+		vlaberto: vlaberto,
+		vlmulta: vlmulta,
+		vlacresc: vlacresc,
+		dtpag: dtpag
     };
 
-    return movim;
+return movim;
 }

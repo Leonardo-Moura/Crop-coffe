@@ -5,6 +5,8 @@ function init() {
     list.addElement(getCompraTrator());
     list.addElement(getPagFuncionarios());
     list.addElement(getVendaCafe());
+	list.addElement(getPagTerceiros());
+	list.addElement(getVendaCafe2());
     updateList();
 }
 
@@ -50,11 +52,13 @@ function getRow(rowData) {
             <td>${rowData.clifor}</td>
 			<td>${rowData.dtvenc}</td>
 			<td>${rowData.valor}</td>
+			<td>${rowData.vlaberto}</td>
+			<td>${rowData.vlpago}</td>
 			<td>${rowData.ctabanc}</td>
 			<td>${rowData.situacao}</td>
             <td>
                 <button class="btn btn-danger btn-sm" onclick="remove(${rowData.id})">Remover</button>
-                <button class="btn btn-info btn-sm" onclick="update(${rowData.id})">Editar</button>
+                <!--<button class="btn btn-info btn-sm" onclick="update(${rowData.id})">Editar</button>-->
             </td>
         </tr>
     `;

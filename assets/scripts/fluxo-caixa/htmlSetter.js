@@ -10,4 +10,9 @@ function setMovim(movim) {
     document.getElementById('inputDtvenc').value = caixa.dtvenc;
     document.getElementById('inputCtabanc').value = getComboValue('inputState', caixa.ctabanc);
     document.getElementById('inputSituacao').value = caixa.situacao;
+	document.getElementById('inputVlpago').value = caixa.vlpago;
+	document.getElementById('inputVlaberto').value = caixa.vlaberto;
+	document.getElementById('inputVlmulta').value = caixa.vlmulta;
+	document.getElementById('inputVlacresc').value = caixa.vlacresc;
+	document.getElementById('inputDtpag').value = caixa.dtpag;
 }
