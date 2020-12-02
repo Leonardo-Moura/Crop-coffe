@@ -1,4 +1,5 @@
 let movim;
+let codigo;
 let descricao;
 let clifor;
 let ccusto;
@@ -18,6 +19,7 @@ function getMovim() {
 
 function clear() {
     movim = '';
+	codigo = '';
     descricao = '';
     clifor = '';
     ccusto = '';
@@ -31,6 +33,7 @@ function clear() {
 
 function load() {
     movim = getMovimFromHtml();
+	codigo = document.getElementById('inputCodigo').value;
     descricao = document.getElementById('inputDesc').value;
     clifor = document.getElementById('inputClifor').value;
     ccusto = getCcustoFromHtml();
@@ -69,6 +72,7 @@ function getCtabancFromHtml() {
 function createMovim() {
     const movim = {
         movim: movim,
+		codigo: codigo,
         descricao: descricao,
         clifor: clifor,
         ccusto: ccusto,

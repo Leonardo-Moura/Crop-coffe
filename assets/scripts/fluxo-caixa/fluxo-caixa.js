@@ -1,11 +1,10 @@
-const movim = new Movim();
+const list = new Lista();
 let idAtual = null;
 
 function init() {
     list.addElement(getCompraTrator());
     list.addElement(getPagFuncionarios());
     list.addElement(getVendaCafe());
-
     updateList();
 }
 
@@ -25,10 +24,10 @@ function addOrUpdate() {
 }
 
 function update(id) {
-    const user = list.getElement(id);
+    const movim = list.getElement(id);
     if (movim) {
         idAtual = movim.id;
-        setUser(movim);
+        setMovim(movim);
     }
 }
 
@@ -46,6 +45,7 @@ function getRow(rowData) {
         <tr>
             <th scope="row">${rowData.id}</th>
 			<td>${rowData.movim}</td>
+			<td>${rowData.codigo}</td>
             <td>${rowData.descricao}</td>
             <td>${rowData.clifor}</td>
 			<td>${rowData.dtvenc}</td>

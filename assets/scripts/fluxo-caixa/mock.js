@@ -1,6 +1,7 @@
 function getCompraTrator() {
     return {
         movim: 'Saída',
+		codigo: '000001',
         descricao: 'Equipamento para plantação',
         clifor: 'ABC Máquinas Agrícolas',
         ccusto: 'Plantação',
@@ -16,6 +17,7 @@ function getCompraTrator() {
 function getPagFuncionarios() {
     return {
         movim: 'Saída',
+		codigo: '000002',
         descricao: 'Pagamento de funcionários',
         clifor: 'Funcionários',
         ccusto: 'Recursos Humanos',
@@ -31,6 +33,7 @@ function getPagFuncionarios() {
 function getVendaCafe() {
     return {
         movim: 'Entrada',
+		codigo: '000003',
         descricao: 'Venda de café',
         clifor: 'Café ABC',
         ccusto: 'Comercial',

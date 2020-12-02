@@ -1,6 +1,7 @@
 function setMovim(movim) {
 	document.getElementById('inputMovim').value = getComboValue('inputPosition', caixa.movim)
-    document.getElementById('inputDesc').value = caixa.descricao;
+    document.getElementById('inputCodigo').value = caixa.codigo;
+	document.getElementById('inputDesc').value = caixa.descricao;
     document.getElementById('inputClifor').value = caixa.clifor;   
     document.getElementById('inputCcusto').value = getComboValue('inputPosition', caixa.ccusto)
 	document.getElementById('inputFormapag').value = getComboValue('inputPosition', caixa.formapag)
