@@ -86,61 +86,109 @@
         <form>
             <h4>Fluxo de Caixa</h4>
 
-            <div class="form-group">
-                <label for="inputAddress">Descrição</label>
-                <input type="text" class="form-control" id="desc" placeholder="Descrição da movimentação...">
-            </div>
+			<div class="form-row">
+				<div class="form-group col-md-2 mr-3">
+						<label class="ml-4"for="destino">Movimentação</label>
+							<select class="form-control" id="inputMovim">
+							<option>Entrada</option>
+							<option>Saída</option>
+						</select>
+				</div>				
+				<div class="form-group col-md-9">
+					<label for="inputAddress">Descrição</label>
+					<input type="text" class="form-control" id="inputDesc" placeholder="Descrição da movimentação...">
+				</div>
+			</div>
 
             <div class="form-group">
-                <label for="inputAddress">Beneficiário</label>
-                <input type="text" class="form-control" id="beneficiario"
+                <label for="inputAddress">Cliente/Fornecedor</label>
+                <input type="text" class="form-control" id="inputClifor"
                     placeholder="Beneficiário da movimentação....">
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="origem">Data de Vencimento</label>
-                    <input type="date" class="form-control" id="data-venc">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="destino">Centro de custo</label>
-                    <select class="form-control" id="parcelas">
-                        <option>1</option>
+                    <label for="destino">Centro de Custo</label>
+                    <select class="form-control" id="inputCcusto">
+                        <option>Administração</option>
+						<option>Comercial</option>
+						<option>Laboratório</option>
+						<option>Manutenção de Máquinas</option>
+						<option>Manutenção Predial</option>
+						<option>Marketing</option>
+						<option>Plantação</option>
+						<option>Prestadores de Serviços</option>
+						<option>Produção</option>
+						<option>Recursos Humanos</option>
+						<option>Segurança</option>
                     </select>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="destino">Valor</label>
-                    <input type="number" class="form-control" id="destino"
-                        placeholder="Valor da movimentação...">
-                </div>
-
-                <div class="form-group col-md-2 mr-3">
-                    <label class="ml-4"for="destino">Movimentação</label>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <label class="btn btn-danger active">
-                                <input type="radio" name="options" id="saida" autocomplete="off" checked> Saída
-                            </label>
-                            <label class="btn btn-success">
-                                <input type="radio" name="options" id="entrada" autocomplete="off"> Entrada
-                            </label>
-                        </div>
-                    </div>
+                </div>				
+				<div class="form-group col-md-3">
+                    <label for="parcelas">Forma de Pagamento</label>
+                    <select class="form-control" id="inputFormapag">
+                        <option>Dinheiro</option>
+						<option>Boleto</option>
+                        <option>Cartão de Débito</option>
+                        <option>Cartão de Crédito</option>
+                        <option>Cheque</option>
+						<option>Débito Automárico</option>
+                        <option>Pix</option>
+						<option>Transferência</option>
+						<option>Várias Formas de Pagamento</option>
+                    </select>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="parcelas">Parcelas</label>
-                    <select class="form-control" id="parcelas">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                    <select class="form-control" id="inputParcelas">
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+						<option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>					
                 </div>
             </div>
+			
+			<div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="destino">Valor</label>
+                    <input type="number" step="0.01" min="0.01" class="form-control" id="inputValor"
+                        placeholder="Valor da movimentação...">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="origem">Data de Vencimento</label>
+                    <input type="date" class="form-control" id="inputDtvenc">
+                </div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-group col-md-3">
+						<label for="parcelas">Conta Bancária</label>
+						<select class="form-control" id="inputCtabanc">
+							<option>Caixa</option>
+							<option>Banco do Brasil</option>
+							<option>Bradesco</option>
+							<option>Itaú</option>
+						</select>					
+				</div>
+				<div class="form-group col-md-3">
+						<label for="parcelas">Situação</label>
+						<select class="form-control" id="inputSituacao">
+							<option>Aguardando Pagamento</option>
+							<option>Pagamento Parcial</option>
+							<option>Pagamento Total</option>
+							<option>Em Atraso</option>
+						</select>
+				</div>
+			</div>
+			
             </div>
 
 
@@ -151,26 +199,17 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Vencimento</th>
                     <th scope="col">Movimentação</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Editar</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Cliente/Fornecedor</th>
+                    <th scope="col">Data de Vencimento</th>
+					<th scope="col">Valor</th>
+					<th scope="col">Banco</th>
+					<th scope="col">Situação</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</th>
-                    <td>Compra Trator</td>
-                    <td>10/10/2020</td>
-                    <td>Saída</td>
-                    <td>R$12.000,00</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm">Remover</button>
-                        <button class="btn btn-info btn-sm">Editar</button>
-                    </td>
-                </tr>
-
+            <tbody id="table">
             </tbody>
         </table>
 
@@ -181,3 +220,13 @@
 </body>
 
 </html>
+
+<script src="../assets/scripts/commom/commom.js"></script>
+<script src="../assets/scripts/commom/lista.js"></script>
+<script src="../assets/scripts/fluxo-caixa/mock.js"></script>
+<script src="../assets/scripts/fluxo-caixa/htmlLoader.js"></script>
+<script src="../assets/scripts/fluxo-caixa/htmlSetter.js"></script>
+<script src="../assets/scripts/fluxo-caixa/fluxo-caixa.js"></script>
+<script>
+    init();
+</script>
