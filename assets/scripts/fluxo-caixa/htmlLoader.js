@@ -55,12 +55,12 @@ function load() {
     situacao = document.getElementById('inputSituacao').value;
 	vlpago = document.getElementById('inputVlpago').value;
     vlaberto = document.getElementById('inputVlaberto').value;
-    vlmulta = document.getElementById('inputVlmulta').value;
+    vlmulta = document.getElementById('inputVlMulta').value;
     vlacresc = document.getElementById('inputVlacresc').value;
     dtpag = document.getElementById('inputDtpag').value;
 }
 
-function getMovimsFromHtml() {
+function getMovimFromHtml() {
 	const movimsElement = document.getElementById('inputMovim');
     return movimsElement[movimsElement.selectedIndex].text;
 }
