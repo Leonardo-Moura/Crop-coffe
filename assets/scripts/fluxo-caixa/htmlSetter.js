@@ -1,18 +1,18 @@
-function setMovim(movim) {
-	document.getElementById('inputMovim').value = getComboValue('inputMovim', caixa.movim);
-    document.getElementById('inputCodigo').value = caixa.codigo;
-	document.getElementById('inputDesc').value = caixa.descricao;
-    document.getElementById('inputClifor').value = caixa.clifor;   
-    document.getElementById('inputCcusto').value = getComboValue('inputCcusto', caixa.ccusto);
-	document.getElementById('inputFormapag').value = getComboValue('inputFormapag', caixa.formapag);
-	document.getElementById('inputParcelas').value = getComboValue('inputParcelas', caixa.parcelas);
-	document.getElementById('inputValor').value = caixa.valor;
-    document.getElementById('inputDtvenc').value = caixa.dtvenc;
-    document.getElementById('inputCtabanc').value = getComboValue('inputCtabanc', caixa.ctabanc);
-    document.getElementById('inputSituacao').value = caixa.situacao;
-	document.getElementById('inputVlpago').value = caixa.vlpago;
-	document.getElementById('inputVlaberto').value = caixa.vlaberto;
-	document.getElementById('inputVlmulta').value = caixa.vlmulta;
-	document.getElementById('inputVlacresc').value = caixa.vlacresc;
-	document.getElementById('inputDtpag').value = caixa.dtpag;
+function setMov(mov) {
+	document.getElementById('inputMovim').value = getComboValue('inputMovim', mov.movim);
+    document.getElementById('inputCodigo').value = mov.codigo;
+	document.getElementById('inputDesc').value = mov.descricao;
+    document.getElementById('inputClifor').value = mov.clifor;   
+    document.getElementById('inputCcusto').value = getComboValue('inputCcusto', mov.ccusto);
+	document.getElementById('inputFormapag').value = getComboValue('inputFormapag', mov.formapag);
+	document.getElementById('inputParcelas').value = getComboValue('inputParcelas', mov.parcelas);
+	document.getElementById('inputValor').value = mov.valor;
+    document.getElementById('inputDtvenc').value = mov.dtvenc;
+    document.getElementById('inputCtabanc').value = getComboValue('inputCtabanc', mov.ctabanc);
+    document.getElementById('inputSituacao').value = mov.situacao;
+	document.getElementById('inputVlpago').value = mov.vlpago;
+	document.getElementById('inputVlaberto').value = mov.vlaberto;
+	document.getElementById('inputVlmulta').value = mov.vlmulta;
+	document.getElementById('inputVlacresc').value = mov.vlacresc;
+	document.getElementById('inputDtpag').value = mov.dtpag;
 }

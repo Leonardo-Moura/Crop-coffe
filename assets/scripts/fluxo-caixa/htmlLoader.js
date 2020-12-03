@@ -55,7 +55,7 @@ function load() {
     situacao = document.getElementById('inputSituacao').value;
 	vlpago = document.getElementById('inputVlpago').value;
     vlaberto = document.getElementById('inputVlaberto').value;
-    vlmulta = document.getElementById('inputVlMulta').value;
+    vlmulta = document.getElementById('inputVlmulta').value;
     vlacresc = document.getElementById('inputVlacresc').value;
     dtpag = document.getElementById('inputDtpag').value;
 }
