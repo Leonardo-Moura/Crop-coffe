@@ -2,9 +2,6 @@
 
 <head>
     <title>CoffeCrop</title>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -171,8 +168,8 @@
 			<div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="destino">Valor Total (R$)</label>
-                    <input type="number" step="0.01" min="0.01" class="form-control" id="inputValor"
-                        placeholder="Valor total da movimentação...">
+                    <input type="number" step="0.01" class="form-control" id="inputValor"
+                        placeholder="0.00">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="origem">Data de Vencimento</label>
@@ -208,26 +205,26 @@
 			<div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="destino">Valor Pago/Recebido (R$)</label>
-                    <input type="number" step="0.01" min="0.01" class="form-control" id="inputVlpago"
-                        placeholder="Valor pago/recebido...">
+                    <input type="number" step="0.01" class="form-control" id="inputVlpago"
+                        placeholder="0.00">
                 </div>
 				<div class="form-group col-md-6">
                     <label for="destino">Valor em Aberto (R$)</label>
-                    <input type="number" step="0.01" min="0.01" class="form-control" id="inputVlaberto"
-                        placeholder="Valor em aberto...">
+                    <input type="number" step="0.01" class="form-control" id="inputVlaberto"
+                        placeholder="0.00">
                 </div>
 			</div>
 			
 			<div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="destino">Valor de Total Multa/Juros (R$)</label>
-                    <input type="number" step="0.01" min="0.01" class="form-control" id="inputVlMulta"
-                        placeholder="Valor total de multa/juros...">
+                    <input type="number" step="0.01" class="form-control" id="inputVlmulta"
+                        placeholder="0.00">
                 </div>
 				<div class="form-group col-md-4">
                     <label for="destino">Valor de Acréscimo/Desconto (R$)</label>
-                    <input type="number" step="0.01" min="0.01" class="form-control" id="inputVlacresc"
-                        placeholder="Valor de acréscimo/desconto...">
+                    <input type="number" step="0.01" class="form-control" id="inputVlacresc"
+                        placeholder="0.00">
                 </div>
 				<div class="form-group col-md-4">
 					<label for="origem">Data de Pagamento/Recebimento</label>
@@ -237,7 +234,7 @@
 			
 			<hr size="10" width="100%"> 
 			
-            <button type="submit" class="btn btn-primary" onclick="addOrUpdate()">Cadastrar</button>
+            <button type="submit" class="btn btn-primary" onclick="addOrUpdate()">Salvar</button>
         </form>
 		
 		
